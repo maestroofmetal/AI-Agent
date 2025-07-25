@@ -32,7 +32,7 @@ def call_function(function_call_part, verbose=False):
     
     # Add working_directory to args for ALL functions
     args = dict(function_call_part.args)
-    args["working_directory"] = "./calculator"  # Add this for all functions
+    args["working_directory"] = "./calculator"  # SET WORKING DIRECTORY HERE
     
     function_result = func_dict[function_call_part.name](**args)
     
