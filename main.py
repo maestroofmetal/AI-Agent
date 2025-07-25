@@ -5,7 +5,7 @@ import contextlib
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-from config import system_prompt, warning_to_hide
+from config import system_prompt
 from functions.get_file_content import *
 from functions.get_files_info import *
 from functions.write_file import *

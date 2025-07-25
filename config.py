@@ -15,5 +15,3 @@ All paths you provide should be relative to the working directory. You do not ne
 Always explain your actions to the user.
 
 """
-
-warning_to_hide = "Warning: there are non-text parts in the response: ['function_call'],returning concatenated text result from text parts,check out the non text parts for full response from model. "
