@@ -44,6 +44,22 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.calculator.evaluate("+ 3")
 
+    def test_whitespace_expression(self):
+        result = self.calculator.evaluate("  ")
+        self.assertIsNone(result)
+
+    def test_float_result(self):
+        result = self.calculator.evaluate("5 / 2")
+        self.assertEqual(result, 2.5)
+
+    def test_operator_precedence(self):
+        result = self.calculator.evaluate("1 + 2 * 3")
+        self.assertEqual(result, 7)
+
+    def test_multiple_operators(self):
+        result = self.calculator.evaluate("1 + 2 - 3 * 4 / 2")
+        self.assertEqual(result, -3.0)
+
 
 if __name__ == "__main__":
     unittest.main()

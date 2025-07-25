@@ -16,11 +16,11 @@ def call_function(function_call_part, verbose=False):
     
     if function_call_part.name not in func_dict:
         return types.Content(
-            role="tool",
+            role="function",
             parts=[
                 types.Part.from_function_response(
                     name=function_call_part.name,
-                    response={"error": f"Unknown function: {function_call_part.name}"},
+                    response={"error": f"Unknown function: {function_call_part.name}"}
                 )
             ]
         )
